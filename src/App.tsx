@@ -4,7 +4,7 @@ import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
 import Cat from './data/cat';
-import {CatData} from './data/catData';
+import {CatData} from './data/cat-data';
 
 function App(): JSX.Element {
   const [cats, setCats] = useState<Array<Cat>>(CatData);
