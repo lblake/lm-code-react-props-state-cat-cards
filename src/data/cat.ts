@@ -1,7 +1,6 @@
 export default interface Cat {
-    name: string;
+  name: string;
   species: string;
   favFoods: Array<string>; // or string[]
   birthYear: number;
-
 }
