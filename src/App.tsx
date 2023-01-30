@@ -9,7 +9,6 @@ import { CatData } from './data/cat-data';
 
 function App(): JSX.Element {
   const [cats, setCats] = useState<Array<Cat>>(CatData);
-  //   console.log("Our pretties 😻: ", cats)
 
   return (
     <>
