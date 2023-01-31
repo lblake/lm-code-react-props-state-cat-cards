@@ -1,4 +1,6 @@
-export const CatData = [
+import Cat from './cat';
+
+export const CatData: Array<Cat> =   [
     {
              name: 'Little Miss Purrfect',
              species: 'Cat',
@@ -70,7 +72,13 @@ export const CatData = [
              species: 'Tiny Cat',
              favFoods: ['milk'],
              birthYear: 2021,
-         }
+         },
+         {
+            name: 'Captain Catface',
+            species: 'Sea Cattain',
+            favFoods: ['fish, rum'],
+            birthYear: 2016,
+          },
  ]
 
  

@@ -1,6 +1,5 @@
-import { catImages } from '../data/cat-image';
-// import cat1 from '../assets/images/cat1.jpg';
-import CatImage from '../components/cat_image'
+import { catImages } from '../data/cat-image-data';
+import CatImage from '../components/cat_image';
 
 interface CatCardProps {
   name: string;
@@ -18,14 +17,16 @@ const CatCard: React.FC<CatCardProps> = (props) => (
       <p className='card__text'>Favourite Food(s): {props.favFoods}</p>
       <p className='card__text'>{props.birthYear}</p>
       <div>
-        <CatImage
-          image={catImages[props.catIndex].image}
-          altText={catImages[props.catIndex].altText}
-          licenceType={catImages[props.catIndex].licenceType}
-          licenceUrl={catImages[props.catIndex].licenceUrl}
-          attributionName={catImages[props.catIndex].attributionName}
-          attributionUrl={catImages[props.catIndex].attributionUrl}
-        />
+        {props.catIndex < catImages.length && (
+          <CatImage
+            image={catImages[props.catIndex].image}
+            altText={catImages[props.catIndex].altText}
+            licenceType={catImages[props.catIndex].licenceType}
+            licenceUrl={catImages[props.catIndex].licenceUrl}
+            attributionName={catImages[props.catIndex].attributionName}
+            attributionUrl={catImages[props.catIndex].attributionUrl}
+          />
+        )}
       </div>
     </div>
   </div>

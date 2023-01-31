@@ -9,11 +9,12 @@ import { CatData } from './data/cat-data';
 
 function App(): JSX.Element {
   const [cats, setCats] = useState<Array<Cat>>(CatData);
+  const catCount: number = cats.length;
 
   return (
     <>
       <Navbar />
-      <Header />
+      <Header catCount={catCount} />
 
       <main>
         <div className='cards__wrapper'>
