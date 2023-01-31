@@ -5,10 +5,11 @@ import Header from './components/header';
 import Footer from './components/footer';
 import CatCard from './components/cat_card';
 import Cat from './data/cat';
-import { CatData } from './data/cat-data';
+import { catData } from './data/cat-data';
+// import { v4 as uuidv4 } from 'uuid';
 
 function App(): JSX.Element {
-  const [cats, setCats] = useState<Array<Cat>>(CatData);
+  const [cats, setCats] = useState<Array<Cat>>(catData);
   const catCount: number = cats.length;
 
   return (
@@ -25,7 +26,7 @@ function App(): JSX.Element {
               favFoods={cat.favFoods}
               birthYear={cat.birthYear}
               catIndex={index}
-              key={index}
+              key={cat.id}
             />
           ))}
         </div>
